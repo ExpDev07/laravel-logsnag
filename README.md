@@ -45,7 +45,7 @@ return [
 
     'project' => env('LOGSNAG_PROJECT', 'laravel'),
 
-    'token' => env('LOGSNAG_TOKEN', '8aeda3b803f711b7362a4ea24af11f4f'),
+    'token' => env('LOGSNAG_TOKEN', ''),
 
 ];
 ```
