@@ -1,6 +1,6 @@
 {
     "name": "expdev07/laravel-logsnag",
-    "description": "This is my package laravel-logsnag",
+    "description": "Get a realtime feed of your Laravel project’s most important events using Logsnag",
     "keywords": [
         "expdev07",
         "laravel",

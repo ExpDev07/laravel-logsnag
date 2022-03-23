@@ -6,6 +6,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/expdev07/laravel-logsnag/Check%20&%20fix%20styling?label=code%20style)](https://github.com/expdev07/laravel-logsnag/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/expdev07/laravel-logsnag.svg?style=flat-square)](https://packagist.org/packages/expdev07/laravel-logsnag)
 
+Get a realtime feed of your Laravel project’s most important events using Logsnag. Supports push notifications straight to your 
+phone. 
+
 ## Support me
 
 I create Open Source software in my spare time. If you wish to support me, consider buying me a coffee :).
