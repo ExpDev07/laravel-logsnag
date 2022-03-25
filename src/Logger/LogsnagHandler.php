@@ -64,7 +64,18 @@ class LogsnagHandler extends AbstractProcessingHandler
      */
     public function getEvent(array $record): string
     {
-        return $record['formatted'];
+        return "{$record['channel']}.{$record['level_name']}: {$record['message']}";
+    }
+
+    /**
+     * Gets the description for the record.
+     *
+     * @param array $record
+     * @return string
+     */
+    public function getDescription(array $record): string
+    {
+        return $record['context'];
     }
 
     /**
