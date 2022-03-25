@@ -4,11 +4,11 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/expdev07/laravel-logsnag.svg?style=flat-square)](https://packagist.org/packages/expdev07/laravel-logsnag)
 [![Total Downloads](https://img.shields.io/packagist/dt/expdev07/laravel-logsnag.svg?style=flat-square)](https://packagist.org/packages/expdev07/laravel-logsnag)
 
-Get a realtime feed of your Laravel project’s most important events using Logsnag. Supports push notifications straight to your 
+Get a realtime feed of your Laravel project’s most important events using [Logsnag](https://logsnag.com/). Supports push notifications straight to your 
 phone. 
 
 **Get notified:**
-1. In the Logsnag dashboard.
+1. In the [Logsnag dashboard](https://app.logsnag.com/dashboard).
 2. On your desktop/laptop (windows + macOS).
 3. On your phone (android + iOS).
 
