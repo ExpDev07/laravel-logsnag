@@ -5,6 +5,9 @@ namespace ExpDev07\Logsnag;
 use ExpDev07\Logsnag\Client\LogsnagClient;
 use ExpDev07\Logsnag\Client\LogsnagRequest;
 
+/**
+ * The Logsnag logger.
+ */
 class Logsnag
 {
 

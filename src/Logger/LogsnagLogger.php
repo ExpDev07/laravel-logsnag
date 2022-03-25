@@ -2,9 +2,12 @@
 
 namespace ExpDev07\Logsnag\Logger;
 
-use Arr;
+use Illuminate\Support\Arr;
 use Monolog\Logger;
 
+/**
+ * The Laravel Logsnag logger.
+ */
 class LogsnagLogger
 {
 
@@ -16,9 +19,14 @@ class LogsnagLogger
      */
     public function __invoke(array $config): Logger
     {
-        [$channel] = $config;
+        // Create handler.
+        $handler = new LogsnagHandler(
+            channel: $config['channel'],
+            notify: $config['notify'] ?? false,
+            level: Logger::toMonologLevel($config['level'] ?? 'debug'),
+        );
 
-        return new Logger('logsnag', Arr::wrap(new LogsnagHandler($channel)));
+        return new Logger('logsnag', Arr::wrap($handler));
     }
 
 }

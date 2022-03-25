@@ -2,8 +2,6 @@
 # laravel-logsnag
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/expdev07/laravel-logsnag.svg?style=flat-square)](https://packagist.org/packages/expdev07/laravel-logsnag)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/expdev07/laravel-logsnag/run-tests?label=tests)](https://github.com/expdev07/laravel-logsnag/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/expdev07/laravel-logsnag/Check%20&%20fix%20styling?label=code%20style)](https://github.com/expdev07/laravel-logsnag/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/expdev07/laravel-logsnag.svg?style=flat-square)](https://packagist.org/packages/expdev07/laravel-logsnag)
 
 Get a realtime feed of your Laravel project’s most important events using Logsnag. Supports push notifications straight to your 
@@ -48,9 +46,29 @@ return [
     |
     */
 
+    /**
+     * The project name.
+     */
     'project' => env('LOGSNAG_PROJECT', 'laravel'),
 
+    /**
+     * The API token.
+     */
     'token' => env('LOGSNAG_TOKEN', ''),
+
+    /**
+     * A mapping of icons for logging.
+     */
+    'icons' => [
+        'DEBUG'     => 'ℹ️',
+        'INFO'      => 'ℹ️',
+        'NOTICE'    => '📌',
+        'WARNING'   => '⚠️',
+        'ERROR'     => '⚠️',
+        'CRITICAL'  => '🔥',
+        'ALERT'     => '🔔️',
+        'EMERGENCY' => '💀',
+    ],
 
 ];
 ```
@@ -63,8 +81,10 @@ Add the Logsnag channel to your logging config:
     'logsnag' => [
         'driver'  => 'custom',
         'via'     => ExpDev07\Logsnag\Logger\LogsnagLogger::class,
+        'level'   => 'debug',
         'project' => 'my-project',
         'channel' => 'my-channel',
+        'notify'  => true,         
     ],
 ];
 ```
@@ -106,6 +126,17 @@ app(LogsnagClient::class)->log(new LogsnagRequest(
     notify: true,
 ));
 ```
+
+## Parameters
+
+* **project:** The logsnag project name.
+* **channel:** The channel to log in. Must be lowercase and hyphenated.
+* **event:** The event name.
+* **description:** The event description.
+* **icon:** Associate the log with an icon (emoji).
+* **notify:** Whether to send push notifications to devices.
+
+See [Logsnag Log](https://sh4yy.notion.site/LogSnag-API-e942b03305c94d4fa72c8a3d24a0ad49#eb98c978cec841d0ab50d52be6eb9f80) route for more information.
 
 ## Testing
 

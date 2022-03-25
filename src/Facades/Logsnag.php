@@ -10,7 +10,7 @@ use RuntimeException;
  *
  * @see \ExpDev07\Logsnag\Logsnag
  *
- * @method static void log(string $channel, string $event)
+ * @method static void log(string $channel, string $event, string $description = null, string $icon = null, bool $notify = false)
  */
 class Logsnag extends Facade
 {

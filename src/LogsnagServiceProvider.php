@@ -6,6 +6,9 @@ use ExpDev07\Logsnag\Client\LogsnagClient;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
+/**
+ * The Logsnag service provider.
+ */
 class LogsnagServiceProvider extends PackageServiceProvider
 {
 

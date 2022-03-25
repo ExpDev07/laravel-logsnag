@@ -4,6 +4,9 @@ namespace ExpDev07\Logsnag\Client;
 
 use Illuminate\Contracts\Support\Arrayable;
 
+/**
+ * A Logsnag logging request.
+ */
 class LogsnagRequest implements Arrayable
 {
 
