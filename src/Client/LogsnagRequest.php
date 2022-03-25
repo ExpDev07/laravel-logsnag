@@ -16,16 +16,16 @@ class LogsnagRequest implements Arrayable
      * @param string $project
      * @param string $channel
      * @param string $event
-     * @param string $description
-     * @param string $icon
+     * @param string|null $description
+     * @param string|null $icon
      * @param bool $notify
      */
     public function __construct(
         public string $project,
         public string $channel,
         public string $event,
-        public string $description,
-        public string $icon,
+        public ?string $description,
+        public ?string $icon,
         public bool $notify,
     ) {}
 
