@@ -11,6 +11,11 @@ phone.
 
 I create Open Source software in my spare time. If you wish to support me, consider buying me a coffee :).
 
+## Beta
+
+Logsnag is currently in beta mode, and you must join the waitlist in order to use it. However, they accept people 
+fairly quickly. Join on their website here: [https://logsnag.com/](https://logsnag.com/).
+
 ## Requirements
 
 * PHP 8+
@@ -96,7 +101,7 @@ Using logger:
 ```php
 use Illuminate\Support\Facades\Log;
  
-Log::channel('logsnag')->info('An error occurred!');
+Log::channel('logsnag')->emergency('There is an emergency! Please fix ASAP.');
 ```
 
 Using facade:
@@ -137,6 +142,12 @@ app(LogsnagClient::class)->log(new LogsnagRequest(
 * **notify:** Whether to send push notifications to devices.
 
 See [Logsnag Log](https://sh4yy.notion.site/LogSnag-API-e942b03305c94d4fa72c8a3d24a0ad49#eb98c978cec841d0ab50d52be6eb9f80) route for more information.
+
+## Screenshots
+
+<img src="https://github.com/ExpDev07/laravel-logsnag/tree/main/.github/screenshots/dashboard_notification_1.png" alt="Dashboard Notification 1" />
+
+<img src="https://github.com/ExpDev07/laravel-logsnag/tree/main/.github/screenshots/dashboard_notification_2.png" alt="Dashboard Notification 2" />
 
 ## Testing
 
