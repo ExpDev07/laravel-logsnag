@@ -20,10 +20,12 @@ class Logsnag
 
     /**
      * Constructs a new Logsnag.
+     *
+     * @param LogsnagClient $client
      */
-    public function __construct()
+    public function __construct(LogsnagClient $client)
     {
-        $this->client = app(LogsnagClient::class);
+        $this->client = $client;
     }
 
     /**
