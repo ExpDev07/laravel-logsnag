@@ -156,9 +156,13 @@ See [Logsnag Log](https://sh4yy.notion.site/LogSnag-API-e942b03305c94d4fa72c8a3d
 
 ## Screenshots
 
-<img src="https://github.com/ExpDev07/laravel-logsnag/tree/main/.github/screenshots/dashboard_notification_1.png" alt="Dashboard Notification 1" />
+A log about a new subscriber in the Logsnag dashboard.
 
-<img src="https://github.com/ExpDev07/laravel-logsnag/tree/main/.github/screenshots/dashboard_notification_2.png" alt="Dashboard Notification 2" />
+<img src="https://raw.githubusercontent.com/ExpDev07/laravel-logsnag/main/.github/screenshots/dashboard_notification_1.png" alt="Dashboard Notification 1" />
+
+A log about an app emergency in the Logsnag dashboard.
+
+<img src="https://raw.githubusercontent.com/ExpDev07/laravel-logsnag/main/.github/screenshots/dashboard_notification_2.png" alt="Dashboard Notification 2" />
 
 ## Testing
 
