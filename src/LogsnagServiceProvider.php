@@ -31,9 +31,13 @@ class LogsnagServiceProvider extends PackageServiceProvider
      */
     protected function registerContainerBindings(): void
     {
+        // Bind the Logsnag client.
         $this->app->instance(LogsnagClient::class, new LogsnagClient(
             token: config('logsnag.token', ''),
         ));
+
+        // Bind the Logsnag.
+        $this->app->instance(Logsnag::class, new Logsnag());
     }
 
 }

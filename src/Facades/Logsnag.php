@@ -24,7 +24,7 @@ class Logsnag extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'laravel-logsnag';
+        return \ExpDev07\Logsnag\Logsnag::class;
     }
 
 }
