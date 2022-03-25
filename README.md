@@ -7,9 +7,20 @@
 Get a realtime feed of your Laravel project’s most important events using Logsnag. Supports push notifications straight to your 
 phone. 
 
+**Get notified:**
+1. In the Logsnag dashboard.
+2. On your desktop/laptop (windows + macOS).
+3. On your phone (android + iOS).
+
 ## Support me
 
 I create Open Source software in my spare time. If you wish to support me, consider buying me a coffee :).
+
+<p>
+<a href='https://ko-fi.com/C1C510DUQ' target='_blank'>
+<img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+</a>
+</p>
 
 ## Beta
 
