@@ -33,6 +33,7 @@ class LogsnagRequest implements Arrayable
      */
     public function toArray(): array
     {
-        return get_object_vars($this);
+        return array_filter(get_object_vars($this));
     }
+
 }

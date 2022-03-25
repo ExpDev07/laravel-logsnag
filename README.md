@@ -13,6 +13,11 @@ phone.
 
 I create Open Source software in my spare time. If you wish to support me, consider buying me a coffee :).
 
+## Requirements
+
+* PHP 8+
+* Laravel 9
+
 ## Installation
 
 You can install the package via composer:
@@ -24,7 +29,7 @@ composer require expdev07/laravel-logsnag
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-logsnag-config"
+php artisan vendor:publish --tag="logsnag-config"
 ```
 
 This is the contents of the published config file:
@@ -71,7 +76,7 @@ Using logger:
 ```php
 use Illuminate\Support\Facades\Log;
  
-Log::channel('logsnag')->info('Someone just subscribed to MySaaS Pro at $9.99!');
+Log::channel('logsnag')->info('An error occurred!');
 ```
 
 Using facade:
@@ -79,7 +84,27 @@ Using facade:
 ```php
 use ExpDev07\Logsnag\Facades\Logsnag;
  
-Logsnag::log('my-channel', 'Someone just subscribed to MySaaS Pro at $9.99!');
+Logsnag::log('my-channel', 
+    event: 'New subscriber!', 
+    description: 'Someone just subscribed to MySaaS Pro at $9.99', 
+    icon: '🤑', 
+    notify: true,
+);
+```
+
+Using client:
+
+```php
+use ExpDev07\Logsnag\Client\LogsnagClient;
+
+app(LogsnagClient::class)->log(new LogsnagRequest(
+    project: 'project-name',
+    channel: 'channel',
+    event: 'Test event',
+    description: 'This is a description for test event',
+    icon: '😊',
+    notify: true,
+));
 ```
 
 ## Testing

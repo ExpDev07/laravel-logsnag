@@ -4,7 +4,6 @@ namespace ExpDev07\Logsnag;
 
 use ExpDev07\Logsnag\Client\LogsnagClient;
 use ExpDev07\Logsnag\Client\LogsnagRequest;
-use Illuminate\Http\Client\PendingRequest;
 
 class Logsnag
 {
@@ -29,16 +28,19 @@ class Logsnag
      *
      * @param string $channel
      * @param string $event
+     * @param string|null $description
+     * @param string|null $icon
+     * @param bool $notify
      */
-    public function log(string $channel, string $event): void
+    public function log(string $channel, string $event, string $description = null, string $icon = null, bool $notify = false): void
     {
         $this->client->log(new LogsnagRequest(
             project: config('logsnag.project'),
             channel: $channel,
             event: $event,
-            description: 'Test description.',
-            icon: '',
-            notify: true,
+            description: $description,
+            icon: $icon,
+            notify: $notify,
         ));
     }
 

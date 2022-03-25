@@ -4,7 +4,6 @@ namespace ExpDev07\Logsnag\Logger;
 
 use ExpDev07\Logsnag\Facades\Logsnag;
 use Monolog\Handler\AbstractProcessingHandler;
-use Monolog\Logger;
 
 /**
  *
